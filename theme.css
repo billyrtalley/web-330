@@ -1,0 +1,131 @@
+body.light-theme {
+    --text-color: #000;
+    --background-color: #fff;
+    --anchor-color: #4F3674;
+    --h1-background-color: #3C275A;
+    --h1-border-color: #D6A800;
+    --heading-background-color: #3C275A;
+    --heading-color: #FFFFFF;
+    --heading-border-color: #D6A800;
+    --anchor-hover-color: #4F3674;
+    --anchor-hover-background-color: #D6A800;
+    --card-background-color: #FFFFFF;
+    --card-title-color: #4F3674;
+    --btn-background-color: #4F3674;
+    --btn-color: #FFFFFF;
+    --btn-hover-background-color: #D6A800;
+    --btn-hover-color: #4F3674;
+    --input-border-color: #CCCCCC;
+}
+
+body.dark-theme {
+    --text-color: #FAFAFA;
+    --background-color: #303030;
+    --anchor-color: #FFFFFF;
+    --h1-background-color: #9C27B0;
+    --h1-border-color: #9C27b0;
+    --heading-background-color: #424242;
+    --heading-color: #FFFFFF;
+    --heading-border-color: #424242;
+    --anchor-hover-color: #D176E1;
+    --anchor-hover-background-color: #303030;
+    --anchor-visited-color: #D6A800;
+    --card-background-color: #424242;
+    --card-title-color: #D176E1;
+    --btn-background-color: #D176E1;
+    --btn-color: #FFFFFF;
+    --btn-hover-background-color: #7D4787;
+    --btn-hover-color: #FFFFFF;
+    --input-border-color: #303030;
+}
+
+* {
+    font-family: 'Oswald', Verdana, Arial, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+a {
+    color: var(--anchor-color);
+}
+
+a:visited {
+    color: var(--anchor-hover-color);
+}
+
+a:hover {
+    color: var(--anchor-hover-color);
+    background-color: var(--anchor-hover-background-color);
+}
+
+h1 {
+    color: var(--heading-color);
+    background-color: var(--h1-background-color);
+    padding: 10px;
+    border: 1px solid, var(--h1-border-color);
+}
+
+h2, h3, h4 {
+    color: var(--heading-color);
+    background-color: var(--heading-background-color);
+    padding: 10px;
+    border: 1px solid, var(--heading-border-color);
+}
+
+.class {
+    background-color: var(--card-background-color);
+}
+
+.card-title {
+    background-color: var(--card-title-color);
+}
+
+.btn-primary {
+    color: var(--btn-color);
+    background-color: var(--btn-background-color);
+}
+
+.btn-primary:hover {
+    color: var(--btn-hover-color);
+    background-color: var(--btn-hover-background-color);
+}
+
+input {
+    color: var(--input-border-color)
+}
+
+.drop-down-menu {
+    color: var(--input-border-color)
+
+}
+
+#icon-mode:hover {
+    cursor: pointer;
+}
+
+#container {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+#icon-text {
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.pull-right {
+    float: right;
+}
+
+i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 3px;
+    padding-right: 3px;
+    
+}
