@@ -65,14 +65,14 @@ h1 {
     color: var(--heading-color);
     background-color: var(--h1-background-color);
     padding: 10px;
-    border: 1px solid, var(--h1-border-color);
+    border: 1px solid var(--h1-border-color);
 }
 
 h2, h3, h4 {
     color: var(--heading-color);
     background-color: var(--heading-background-color);
     padding: 10px;
-    border: 1px solid, var(--heading-border-color);
+    border: 1px solid var(--heading-border-color);
 }
 
 .class {
