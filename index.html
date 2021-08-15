@@ -9,6 +9,7 @@ Krasso, Richard and Bellevue University. Assignment 1- Environment Setup. n.d.
 Date Accessed: August 11-15, 2021.
 Krasso, Richard and Bellevue University. Web 330 HTML, CSS, and JavaScript Requirements. n.d.
 Date Accessed: August 11-15, 2021.
+Krasso, Richard and Bellevue University. GitHub. 
 Stack Overflow. Getting the button into the top right corner inside the div box. September 11, 2013.
 url: https://stackoverflow.com/questions/18750803/getting-the-button-into-the-top-right-corner-inside-the-div-box
 Used to adjust placement of light mode toggle button. Date Accessed: AUgust 15, 2021.
@@ -81,24 +82,20 @@ Used to adjust placement of light mode toggle button. Date Accessed: AUgust 15, 
     </div>
 
     <script>
-        /**
-         * Set the default theme to light if one has not been set in the browsers localStorage
-         */
+
+        // Set up the default view to light theme
+        
         setDefaultTheme();
 
-        /**
-         * Function to switch the users selected website theme
-         * @param x (this instance)
-         */
+    //   this function will switch the website color theme to what the user selects
+
         function toggleMode(x)
         {
-            let colorTheme = document.body.classList; // get the body's CSS class
-            let iconMode = x.classList; // get the current classes assigned to the triggered button
+            let colorTheme = document.body.classList; // get the CSS class
+            let iconMode = x.classList; // assign the classes to the button
 
-            /**
-             * If the current body class is set to the light-theme, update the user's preference to the dark-theme in the browsers
-             * local storage.
-             */
+    //if the current view is light, then switch to the dark-theme
+
             if (colorTheme.value === "light-theme")
             {
                 localStorage.clear();
@@ -106,10 +103,7 @@ Used to adjust placement of light mode toggle button. Date Accessed: AUgust 15, 
                 localStorage.setItem("iconMode", "fa-toggle-on");
                 localStorage.setItem("iconText", "Dark Mode");
             }
-            /**
-             * If the current body class is set to the dark-theme, update the user's preference to the light-theme in the browsers
-             * local storage.
-             */
+            
             else
             {
                 localStorage.clear();
@@ -118,18 +112,15 @@ Used to adjust placement of light mode toggle button. Date Accessed: AUgust 15, 
                 localStorage.setItem("iconText", "Light Mode");
             }
 
-            /**
-             * Apply the updated selection to the HTML page elements
-             */
+     //if the current view is dark, then switch to the light-theme
+
             colorTheme.value = localStorage.getItem("mode");
             iconMode.value = `fa ${localStorage.getItem("iconMode")} pull-right`;
             document.getElementById("icon-text").innerHTML = localStorage.getItem("iconText");
         }
 
-        /**
-         * Function to clear the browsers localStorage and set the default theme to light-theme.
-         * This function is for demonstration purposes only and does not need to be included in any of your solutions.
-         */
+    //resets the view to the default light-theme view
+        
         function clearLocalStorage() {
             localStorage.clear();
             document.body.classList.value = "light-theme";
