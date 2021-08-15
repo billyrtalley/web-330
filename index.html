@@ -91,7 +91,7 @@ Used to adjust placement of light mode toggle button. Date Accessed: AUgust 15, 
 
         function toggleMode(x)
         {
-            let colorTheme = document.body.classList; // get the CSS class
+            let colorTheme = document.body.classList; // get the CSS class for the color theme
             let iconMode = x.classList; // assign the classes to the button
 
     //if the current view is light, then switch to the dark-theme
@@ -120,7 +120,7 @@ Used to adjust placement of light mode toggle button. Date Accessed: AUgust 15, 
         }
 
     //resets the view to the default light-theme view
-        
+
         function clearLocalStorage() {
             localStorage.clear();
             document.body.classList.value = "light-theme";
