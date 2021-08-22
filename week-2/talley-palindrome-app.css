@@ -43,7 +43,7 @@
      color: #fff;
      background-color: #3C275A;
      width: 300px;
-     height: 35px;
+     height: 45px;
 }
 
 #btnCheckPhrase {
@@ -91,4 +91,10 @@
     font-size: 24px;
     color: #4F3674;
     font-weight: 400;
+}
+
+#card-title {
+    font-size: 2em;
+    color: #4F3674;
+    font-weight: 400; 
 }
