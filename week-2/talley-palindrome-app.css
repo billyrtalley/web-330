@@ -52,7 +52,8 @@
 
 .input {
     padding: 12px 20px;
-    margin: 8px 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -69,18 +70,19 @@
 
 #card-results-title {
     text-align: center;
-    font-size: 2em;
+    font-size: 24px;
     color: #4F3674;
     font-weight: 400;
 }
 
 #card-results-content {
     padding: 2px 16px;
+    font-size: 20px;
 }
 
 #assign-results-header {
     text-align: center;
-    font-size: 2em;
+    font-size: 24px;
     color: #4F3674;
     font-weight: 400;
 }
