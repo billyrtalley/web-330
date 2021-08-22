@@ -30,7 +30,7 @@ a:visited {
     color: #3C275A;
 }
 
-/* Week 2.2 Additions */
+
 
 .return-home {
     text-decoration: underline;
@@ -47,4 +47,28 @@ a:visited {
 
 .return-home:visited {
     color: #3C275A;
+}
+
+/* Week 2.2 Additions */
+
+#btnCheckPhrase {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 15px 32px;
+    color: #000;
+}
+
+#btnCheckPhrase {
+    background-color: #4F3674;
+    color: #fff;
+}
+
+#btnCheckPhrase:hover {
+    background-color: #D6A800;
+    color: #4F3674;
 }

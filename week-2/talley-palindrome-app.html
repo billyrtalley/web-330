@@ -1,0 +1,141 @@
+<!-- /*
+============================================
+; Title: Date.prototype.toLocaleString()
+; URL: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+; Author: MDN Web Docs
+; Date Accessed: 19 August 2021
+; Modified By: William Talley
+; Date Modified: 19 August 2021
+; Description: This function returns the current date
+; in the MM/DD/YYYY format
+;===========================================
+*/  -->
+<!-- /*
+============================================
+; Title: Array.prototype.reverse()
+; URL: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
+; Author: w3resource
+; Date Accessed: 22 August 2021
+; Modified By: William Talley
+; Date Modified: 22 August 2021
+; Description: function for reversing objects in an array
+;===========================================
+============================================
+; Title: Two Ways to Check for Palindromes in JavaScript
+; URL: https://www.freecodecamp.org/news/two-ways-to-check-for-palindromes-in-javascript-64fea8191fd7/
+; Author: Sonya Moisset
+; Date: 22 March 2016
+; Date Accessed: 22 August 2021
+; Modified By: William Talley
+; Date Modified: 22 August 2021
+; Description: function for checking if a string is a palindrome
+;===========================================
+*/  -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WEB330- Enterprise JavaScript II</title>
+    <meta
+      name="description"
+      content="Assignment 2.2 Palindrome App"
+    />
+    <meta
+      name="keywords"
+      content="WEB330, Web Development, Assignment 2.2, week 2"
+    />
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="William Talley" />
+    <link rel="stylesheet" type="text/css" href="/talley-palindrome-app.css" />
+    <link rel="stylesheet" type="text/css" href="../site.css">
+    <link rel="stylesheet" type="text/css" href="../theme.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+       <div class="container">
+      <h1 id="game-header">Welcome to the Palindrome App!</h1>
+
+      <div class="card">
+        <div class="card-title">Palindrome Checker</div>
+        <br />
+        <form>
+          <label for="txtPhraseLabel" id="txtphraseLabel">
+            Phrase Value:
+          </label>
+          <input type="text" name="txtPhrase" id="txtPhrase" />
+          <br />
+          <button type="button" id="btnCheckPhrase">Check Phrase</button>
+        </form>
+      </div>
+      <br />
+      <div id="card">
+        <p id="card-title">Palindrome Results</p>
+        <div id="assign-results-header"></div>
+        <div id="assign-results" class="assign-results-text"></div>
+      </div>
+      <br />
+      <a href="../index.html" class="return-home">Return</a>
+    </div>
+     
+     <script>
+
+      function getTodaysDate() { 
+        const date = new Date();
+        return date.toLocaleDateString("en-us");
+      }
+//returns the current date using the "en-us" format    
+
+    function getLength(userInput) {
+      return userInput.length;
+    }
+//returns the length of the string input by user
+
+    function reverse(userInput) {
+      let splitString = input.split("");
+      let reversedArray = splitString.reverse();
+      let joinArray = reverseArray.join("");
+      return joinArray;
+    }
+//takes string and splits, reverses and rejoins the string
+
+    function isPalindrome(userInput) {
+      if (userInput === reverse(userInput)) {
+        return true;
+      } else return false;
+    }
+//compares the reverse of the string to the user's input string
+  
+    document.getElementById("btnCheckPhrase").onclick = () => {
+      let assignResultsHeader = document.getElementById("assign-results-header");
+      let assignResults = document.getElementById("assign-results");
+//assigns variable to corresponding div's in the HTML
+      let txtPhrase = document.getElementById("txtPhrase").value;
+//assigns variable to txtPhrase in HTML
+      let today = getTodaysDate();
+//assigns variable to the date function
+      let len = getLength(txtPhrase);
+//assigns variable to the length of the string function
+    
+    let answer = assignResultsHeader.innerHTML = 
+      `<p>Date: ${today}<br>Original Phrase: ${txtPhrase}<br>Reversed Phrase: ${reversedPhrase}<br>Phrase Length: ${len} </p>`;
+//assigns variable to the common element of results to save retyping in the following IF ELSE statement twice
+
+    if (isPalindrome = document.getElementById(txtPhrase.toLowerCase())) {
+      assignResultsHeader.innerHTML = answer;
+      assignResults.innerHTML = `<p>${txtPhrase} <b><u>is</b></u> a palindrome!</p>`;
+//results if the user input is a palindrome
+    } else {
+      assignResultsHeader.innerHTML = answer;
+      assignResults.innerHtml = `<p>${txtPhrase} <b><u>is not</b></u> a palindrome!</p>`;
+//results if the user input is not a palindrome
+    }
+  };
+
+      </script>
+  </body>
+</html>
