@@ -126,7 +126,7 @@
       `<p>Date: ${today}<br>Original Phrase: ${txtPhrase}<br>Reversed Phrase: ${reversedPhrase}<br>Phrase Length: ${len} </p>`;
 //assigns variable to the common element of results to save retyping in the following IF ELSE statement twice
 
-    if (isPalindrome = document.getElementById(txtPhrase.toLowerCase())) {
+    if (isPalindrome(txtPhrase.toLowerCase())) {
       assignResultsHeader.innerHTML = answer;
       assignResults.innerHTML = `<p>${txtPhrase} <b><u>is</b></u> a palindrome!</p>`;
 //results if the user input is a palindrome
