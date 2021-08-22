@@ -92,6 +92,13 @@
     font-weight: 400;
 }
 
+#assign-results {
+    text-align: center;
+    font-size: 24px;
+    color: #4F3674;
+    font-weight: 400;
+}
+
 #card-title {
     font-size: 2em;
     color: #4F3674;
