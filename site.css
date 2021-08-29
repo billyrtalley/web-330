@@ -18,7 +18,7 @@ h1, h2, h3, h4 {
 a {
     text-decoration: none;
     color: #453674;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
 }
 
 a:hover {
@@ -36,8 +36,9 @@ a:visited {
     text-decoration: underline;
     color:#453674;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 100px;
     margin-right: 100px;
+    margin-bottom: 20px;
 }
 
 .return-home:hover {
