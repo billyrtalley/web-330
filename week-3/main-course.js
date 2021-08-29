@@ -18,6 +18,4 @@ export class MainCourse extends Product
     {
         super(name, price);
     }
-
-
 }
