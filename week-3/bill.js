@@ -11,7 +11,7 @@ export class Bill
  addAppetizer(appetizer) {
     this._appetizers.push(appetizer);
 }
-//function named addAppetizer() with one parameter of type mainCourse
+//function named addAppetizer() with one parameter of type appetizer
 //push the mainCourse object to the _appetizers array in the body of the function
 
 
@@ -24,14 +24,14 @@ addMainCourse(mainCourse) {
 addDessert(dessert) {
     this._desserts.push(dessert);
 }
-//function named addDessert() with one parameter of type mainCourse
+//function named addDessert() with one parameter of type dessert
 //push the mainCourse object to the _desserts array in the body of the function
 
-addBeverages(beverage)
+addBeverage(beverage)
 {
     this._beverages.push(beverage);
 }
-//function named addBeverages() with one parameter of type mainCourse
+//function named addBeverages() with one parameter of type beverage
 //push the mainCourse object to the _beverages array in the body of the function
 
 
