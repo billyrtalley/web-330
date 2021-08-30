@@ -157,7 +157,7 @@
 
         for (let appetizer of appetizers) {
           if (appetizer.checked) {
-            bill.addAppetizer(newAppetizer(appetizer.name, appetizer.value));
+            bill.addAppetizer(new Appetizer(appetizer.name, appetizer.value));
           }
         }
         for (let beverage of beverages) {
