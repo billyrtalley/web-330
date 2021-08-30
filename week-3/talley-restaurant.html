@@ -171,6 +171,12 @@
           }
         }
 
+        for (let mainCourse of mainCourses) {
+          if (dessert.checked) {
+            bill.addmainCourse(new mainCourse(mainCourse.name, mainCourse.value));
+          }
+        }
+
         let total = bill.getTotal();
         document.getElementById("order-total").innerHTML = `Your order total is ${total}`;
 
