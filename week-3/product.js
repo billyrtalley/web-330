@@ -10,8 +10,6 @@
 // ; parameters: home and price. Export the class.
 // ;===========================================
 
-
-
 export class Product 
 {
     constructor(name, price)
