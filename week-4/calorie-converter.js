@@ -18,6 +18,16 @@
 // ; Date Modified: 4-5 September 2021
 // ; Description: Describes the static keyword and th
 // ;===========================================
+// ============================================
+// ; Title: Modules, Introduction
+// ;URL: https://javascript.info/modules-intro 
+// ; Author: JavaScript.info
+// ; Dates Accessed: 5 September 2021
+// ; Modified By: William Talley
+// ; 
+// ; Description: how to import and export a module
+// ;===========================================
+
 
 import { FoodModel } from "./food-model";
 
