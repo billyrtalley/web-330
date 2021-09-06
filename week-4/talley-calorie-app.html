@@ -5,6 +5,8 @@
   Description: Web application that takes the input food and 
   gives the food's calorie count in a table. The app also uses a
   toggle for light and dark themes
+ Additional help with error detection and troubleshooting done in 
+ collaboration with Bellevue classmate Adam Rodgers
 -->
 
 <!DOCTYPE html>
@@ -71,7 +73,7 @@
     </div>
 
     <script src="./light-dark.js"></script> 
-    <script src= "calorie-converter.js" type= "module"> 
+    <script type= "module"> 
         import {CalorieConverter} from "./calorie-converter.js";
 
         let txtFood = document.getElementById("txtFoodItem");
@@ -96,7 +98,7 @@
 
         document.addEventListener("keyup", (e) => { 
             if(e.key == "Enter") {
-                document.getElementById('btnSearch').click();
+                document.getElementById('btnSearch').onclick();
             }
         });
 
