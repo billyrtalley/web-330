@@ -16,6 +16,11 @@ body.light-theme {
     --btn-hover-background-color: #D6A800;
     --btn-hover-color: #4F3674;
     --input-border-color: #CCCCCC;
+    --table-header-background-color: #4F3674;
+    --table-header-color: #FFFFFF;
+    --table-border-color: #DDDDDD;
+    --table-hover-background-color: #D6A800;
+    --table-hover-color: #4F3674;
 }
 
 body.dark-theme {
@@ -37,6 +42,11 @@ body.dark-theme {
     --btn-hover-background-color: #7D4787;
     --btn-hover-color: #FFFFFF;
     --input-border-color: #303030;
+    --table-header-background-color: #D176E1;
+    --table-header-color: #FFFFFF;
+    --table-border-color: #303030;
+    --table-hover-background-color: #7D4787;
+    --table-hover-color: #FFFFFF;
 }
 
 * {
@@ -81,6 +91,7 @@ h2, h3, h4 {
 
 .card-title {
     background-color: var(--card-title-color);
+    color: var(--text-color);
 }
 
 .btn-primary {
@@ -94,7 +105,8 @@ h2, h3, h4 {
 }
 
 input {
-    color: var(--input-border-color)
+    color: var(--input-border-color);
+    color: var(--text-color);
 }
 
 .drop-down-menu {
@@ -129,3 +141,22 @@ i {
     padding-right: 3px;
     
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+ 
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4F3674;
+    color: #fff;
+    border: 1px solid #ddd;
+  }
+ 
+  td {
+   border: 1px solid #ddd;
+  }
