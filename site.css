@@ -73,3 +73,12 @@ a:visited {
     background-color: #D6A800;
     color: #4F3674;
 }
+
+i {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 3px;
+    padding-right: 3px;
+    
+}
