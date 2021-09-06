@@ -1,6 +1,6 @@
 //light and dark theme from week 1 index.html
 
-setDefaultTheme();
+//setDefaultTheme();
 // functions for light and dark mode from WEB330 week1 index.html page
 //   this function will switch the website color theme to what the user selects
 
