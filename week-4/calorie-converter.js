@@ -41,6 +41,6 @@ export class CalorieConverter
 
 //created a static variable called data and populated it the data from the assignment instructions
 //created a static function  find with a single string parameter. use the filter function to return
-//a new array with the ojects matching the parameter sting (name and calories)
+//a new array with the objects matching the parameter sting (name and calories)
 //compare the name field to compare the parameter string
 //used .toLowerCase so everything is compared in lower case to account for case sensitivity
