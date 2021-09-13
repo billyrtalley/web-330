@@ -42,12 +42,13 @@ table {
   }
   
   th {
-    padding-top: 12px;
+    padding-top: 16px;
     padding-bottom: 12px;
     text-align: left;
     background-color: #4f3674;
     color: #fff;
     border: 1px solid #ddd;
+    margin-bottom: 10px;
   }
   
   td {
