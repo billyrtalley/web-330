@@ -1,0 +1,116 @@
+<!--
+  Title: WEB330 Exercise 5.2 Bob's Automotive Repair Shop
+  Author: William Talley
+  Date: 5 September 2021
+  Description: Web application is designed to learn how to use
+  JavaScript Iterators by building a shopping cart website
+ Additional help with error detection and troubleshooting done in 
+ collaboration with Bellevue classmate Adam Rodgers
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WEB330- Enterprise JavaScript II</title>
+    <meta
+      name="description"
+      content="Assignment 5.2 Bob's Automotive Repair Shop"
+    />
+    <meta
+      name="keywords"
+      content="WEB330, Web Development, Assignment 5.2, week 5"
+    />
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="William Talley" />
+    <link rel="stylesheet" type="text/css" href="talley-bobs-auto-repair.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../theme.css"> -->
+    <link rel="stylesheet" type="text/css" href="../global.css">
+    <link rel="stylesheet" type="text/css" href= "../site.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/> 
+  </head>
+
+  <body>
+    <div class="container">
+      <h1 class= "app-header">Welcome to Bob's Automotive Repair Shop!</h1>
+
+      <div class="card">
+        <div class="card-title">Product Listing</div>
+        <center><cart-component class="card-title"></cart-component></center>
+        <div class="card-content">
+          <form>
+            <label for="txtProductList" id="txtProductList"> Choose a product: </label>
+            <select class="drop-down-menu" id="productList">
+              <option value="Select">--Select--</option>
+              <option value="19.99">Oil Change</option>
+              <option value="18.44">Filter Replacement</option>
+              <option value="9.99">Wiper Fluid Refill</option>
+            </select>
+            <br /><br />
+            <i id="cart-message">To view your shopping cart, click on the cart icon</i>
+            <br />
+
+            <button type="button" id="btnAddProduct">Add to Cart</button>
+          </form>
+        </div>
+      </div>
+      <a href="../index.html" class="return-home">Return</a>
+      <br />
+      <div class="card">
+            <div class="card">
+              <div class="card-title">Shopping Cart</div>
+              <div class="card-content" id="shopping-cart"></div>
+            </div>
+          </div>
+    </div>
+
+    <script type="module">
+      import { CartComponent } from "./cart-component.js";
+      import { Product } from "./product.js";
+      import { ShoppingCart } from "./shopping-cart.js";
+
+      let shoppingCart = new ShoppingCart();
+
+      setCartCount();
+
+      document.getElementById("btnAddProduct").onclick = function () {
+        let productList = document.getElementById("productList");
+        let product = productList.options[productList.selectIndex].text;
+        let productValue = productList.options[product.list.selectedIndex].value;
+
+        if (product != "--Select--") {
+          shoppingCart.addProduct(new Product(product, productValue));
+          setCartCount();
+          alert(`${product} was added to your shopping cart!`);
+          productList.value = "Select";
+        }
+      };
+
+      document.getElementById("cartIcon").onclick = function () {
+        let cartDisplayTable = `<table class="table"><tr>th>ID</th><th>Name</th><th>Price</th>`;
+
+        for (let _products of shoppingCart) {
+          cartDisplayTable += `<tr><td>${_products.id}</td><td>${_products.name}</td><td>${_products.price}</td></tr>`;
+        }
+
+        cartDisplayTable += `</table>`;
+
+        document.getElementById("shoppingCart").innerHTML = cartDisplayTable;
+
+      };
+
+      function setCartCount() {
+        document.getElementById("card-count").innerHTML = shoppingCart.count();
+      }
+
+
+
+    </script>
+
+
+
+  </body>
+</html>
+
+  
