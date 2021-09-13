@@ -29,5 +29,27 @@
     padding-top: 3px;
     padding-right: 3px;
     margin-bottom: 10px;
+    color: #df546a;
+    font-size: 12px;
+    letter-spacing: 2px;
     
 } 
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4f3674;
+    color: #fff;
+    border: 1px solid #ddd;
+  }
+  
+  td {
+    border: 1px solid #ddd;
+  }
