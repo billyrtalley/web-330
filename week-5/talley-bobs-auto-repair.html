@@ -88,7 +88,7 @@
       };
 
       document.getElementById("cartIcon").onclick = function () {
-        let cartDisplayTable = `<table class="table"><tr>th>ID</th><th>Name</th><th>Price</th>`;
+        let cartDisplayTable = `<table class="table"><tr><th>ID</th><th>Name</th><th>Price</th>`;
 
         for (let _products of shoppingCart) {
           cartDisplayTable += `<tr><td>${_products.id}</td><td>${_products.name}</td><td>${_products.price}</td></tr>`;
