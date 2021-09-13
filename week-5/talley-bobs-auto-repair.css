@@ -54,3 +54,10 @@ table {
   td {
     border: 1px solid #ddd;
   }
+
+  h1, h2, h3, h4 {
+    background-color: #3C275A;
+    color: #fff;
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
