@@ -77,7 +77,7 @@
       document.getElementById("btnAddProduct").onclick = function () {
         let productList = document.getElementById("productList");
         let product = productList.options[productList.selectedIndex].text;
-        let productValue = productList.options[product.list.selectedIndex].value;
+        let productValue = productList.options[productList.selectedIndex].value;
 
         if (product != "--Select--") {
           shoppingCart.addProduct(new Product(product, productValue));
