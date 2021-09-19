@@ -88,6 +88,13 @@
             </div>
         </div>
     </div>
+
+    <a class="return-home" href="../index.html">Return</a>
+
+    <div class="card">
+        <div class="card-title">Calculation as of <span id="today"></span></div>
+        <div id="futureValue"></div>
+    </div>    
     
     <script type="module">
 //Import FinanceCalculator and Validator
@@ -127,7 +134,7 @@
             }
 
             if (rateValidator.validate() && monthlyPaymentValidator.validate ()) {
-                errorLorE1.innerHtml = "";
+                errorLogE1.innerHTML = "";
                 let futureValue = FinanceCalculator.calculateFutureValue(monthlyPayment, rate, years);
                 let toCurrency = FinanceCalculator.convertToCurrency(futureValue);
                 document.getElementById("futureValue").innerHTML = `The future value is ${toCurrency}`;
