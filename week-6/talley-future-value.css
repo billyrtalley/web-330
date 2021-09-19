@@ -1,0 +1,27 @@
+/**
+Title: talley-future-value.css
+Author: William Talley
+Date: September 19, 2021
+Description: Additional style elements for 
+Assignment 6.2 (danger-right, danger and form-label
+*/
+
+.danger-right {
+    color: #DF546A;
+    font-size: 12px;
+    float:  right;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.danger {
+    color: #DF546A;
+    font-size: 12px;
+    letter-spacing: 2px;
+    float: right;
+}
+
+.form-label {
+    display: inline-block;
+    padding-top: 10px;
+}
