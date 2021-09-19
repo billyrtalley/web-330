@@ -26,7 +26,7 @@ Assignment 6.2 (danger-right, danger and form-label
     padding-top: 10px;
 }
 
-input {
+#listNumOfYears, #txtYearlyRate, #txtMonthlyPayment {
     height: 80px;
-    
+
 }
