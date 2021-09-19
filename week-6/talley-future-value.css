@@ -35,3 +35,20 @@ input   {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+select {
+    padding: 12px 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#futureValue {
+    text-align: center;
+    font-size: 24px;
+    color: #4F3674;
+    font-weight: 400;
+}
