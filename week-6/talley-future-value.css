@@ -25,3 +25,8 @@ Assignment 6.2 (danger-right, danger and form-label
     display: inline-block;
     padding-top: 10px;
 }
+
+input {
+    height: 80px;
+    
+}
