@@ -125,7 +125,7 @@ h5 {
 
 .bucket-container {
     background-image: url("../images/bucket_list.png");
-    object-fit: fill;
+    object-fit: cover;
     width: 100%;
 }
 
