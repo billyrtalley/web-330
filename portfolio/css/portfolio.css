@@ -121,25 +121,24 @@ h5 {
 
 .bucket-list {
     background-color: #C0C0C1;
-}
-
-.bucket-container {
     background-image: url("../images/bucket_list.png");
     object-fit: cover;
     width: 100%;
 }
 
+
+
 .api {
     background-image: url("../images/API.png");
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .databases {
     background-image: url("../images/database.png");
-    object-fit: fill;
+    object-fit: cover;
 }
 
 .work {
     background-image: url("../images/work.png");
-    object-fit: fill;
+    object-fit: cover;
 }
