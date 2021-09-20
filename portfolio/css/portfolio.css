@@ -1,0 +1,145 @@
+.landing {
+    background-image: url('../images/landing.png');
+}
+
+#logo {
+    color: #A63740;
+    font-family: 'Raleway', sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    background-color: #262626;
+    opacity: 90%;
+    width: 175px;
+    text-align: center;
+    margin-top: 16px;
+    margin-left: 10px;
+}
+
+.header-nav {
+    background-color: #262626;
+    opacity: 90%;
+    width: 175px;
+    text-align: center;
+    margin-top: -16px;
+    margin-left: 10px;
+}
+
+.nav-link {
+    font-family: 'Raleway', sans-serif;
+    color: #F2F2F2;
+
+}
+
+.nav-link:hover {
+    color: #7D9E99;
+}
+
+.nav-link:active {
+    color: #A63740;
+}
+
+.text-white {
+    color:#F2F2F2;
+}
+
+.title {
+    color: #A63740;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    font-size: 56px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.landing-main {
+    font-size: 66px;
+    color: #A63740;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    margin-left: 125px;
+    margin-top: 150px;
+}
+
+h5 {
+    color:#F2F2F2;
+}
+
+.footer-nav {
+    background-color: #262626;
+    height: 100px;
+    
+}
+
+.footer-navbar {
+    display: inline;
+    list-style-type: none;
+    background-color: #262626;
+    opacity: 90%;
+    display: inline;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.copyright {
+    background-color: #262626;
+    color: #F2F2F2;
+    font-family: 'Roboto', sans-serif;
+}
+
+.footer-link {
+    font-family: 'Raleway', sans-serif;
+    color: #F2F2F2;
+    display: inline;
+    list-style-type: none;
+    margin-top: 40px;
+}
+
+.footer-link:hover {
+    color: #7D9E99;
+}
+
+.footer-li {
+    color: #F2F2F2;
+    display: inline;
+    list-style-type: none;
+    margin-top: 40px;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    background-color: #262626;
+    opacity: 90%; 
+}
+
+.footer-li:hover {
+    color: #7D9E99;
+}
+
+.about {
+    background-color: #C0C0C1;
+}
+
+.bucket-list {
+    background-color: #C0C0C1;
+}
+
+.bucket-container {
+    background-image: url("../images/bucket_list.png");
+    object-fit: fill;
+    width: 100%;
+}
+
+.api {
+    background-image: url("../images/API.png");
+    object-fit: fill;
+}
+
+.databases {
+    background-image: url("../images/database.png");
+    object-fit: fill;
+}
+
+.work {
+    background-image: url("../images/work.png");
+    object-fit: fill;
+}
