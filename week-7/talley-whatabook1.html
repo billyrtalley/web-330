@@ -17,7 +17,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEB330- Enterprise JavaScript II</title>
     <meta name="description" content="Assignment 7.2 WhatABook Part 1"/>
     <meta name="keywords"content="WEB330, Web Development, XML, Assignment 7.2, week 7"/>
@@ -55,18 +56,19 @@
         //populate HTML with XML data
         window.addEventListener('DOMContentLoaded', function(event) { 
 
-//set variable filename as the books.xml file
+//set variable filename as the books.xml file exhibit C from Assignment 7 instructions
             let fileName = 'books.xml';
 
 //use fetch to pass-in the fileName variable
             fetch(fileName)
             .then(res => res.text())
             .then(data => { 
+
                 let domParser = new DOMParser();
                 let xmlBooks = domParser.parseFromString(data, "text/xml")
 
 // Call the loadBooks() function supplying it the xmlBooks variable               
-                loadBook(xmlBooks);
+                loadBooks(xmlBooks);
 
 //Call the addIsbnClickEvents() function    
 
@@ -121,7 +123,7 @@
 //table closing tags
             tableData += `</tbody></table>`;
 
- //Bind the variable to the bookList divv's innerHTML          
+ //Bind the variable to the bookList div's innerHTML          
             document.getElementById('bookList').innerHTML = tableData;
 
         }
