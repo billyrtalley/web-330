@@ -1,0 +1,168 @@
+<!--
+  Title: WEB330 Exercise 7.2 WhatABook Part 1
+  Author: William Talley
+  Date: 25 September 2021
+  Description: Web application to exercise the use of XML and the Fetch API in 
+  Javascript.
+  Description: Using Fetch
+    Source: MDN Web Docs. n.d. url: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch 
+    Date Accessed: 23-25 September 2021
+   Description: Parsing and serializing XML
+    Source: MDN Web Docs. n.d. url: https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML 
+    Date Accessed: 23-25 September 2021 
+ Additional help with error detection and troubleshooting done in 
+ collaboration with Bellevue classmate Adam Rodgers
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WEB330- Enterprise JavaScript II</title>
+    <meta name="description" content="Assignment 7.2 WhatABook Part 1"/>
+    <meta name="keywords"content="WEB330, Web Development, XML, Assignment 7.2, week 7"/>
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="William Talley" />
+    <link rel="stylesheet" type="text/css" href="../theme.css"> 
+    <link rel="stylesheet" type="text/css" href="../global.css">
+    <link rel="stylesheet" type="text/css" href= "../site.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+     
+    <div class="container">
+
+        <div class="app-header">Welcome to the WhatABook, Part 1 App!</div>
+
+            <div class="card">
+                <div class="card-title">Book Listing</div>
+                <div class="card-content" id="booklist"></div>
+            </div>
+<!-- Return to landing page link so it isn't too far down the page -->
+            <a class="return-home" href="../index.html">Return</a>
+
+            <!-- Selection Results -->
+            <div class="card">
+                <div class="card-title">Selected Books</div>
+                <div class="card-content" id="selectedBooks"></div>
+            </div>
+        </div>      
+    </div>
+
+    <script>
+
+        //populate HTML with XML data
+        window.addEventListener('DOMContentLoaded', function(event) { 
+
+//set variable filename as the books.xml file
+            let fileName = 'books.xml';
+
+//use fetch to pass-in the fileName variable
+            fetch(fileName)
+            .then(res => res.text())
+            .then(data => { 
+                let domParser = new DOMParser();
+                let xmlBooks = domParser.parseFromString(data, "text/xml")
+
+// Call the loadBooks() function supplying it the xmlBooks variable               
+                loadBook(xmlBooks);
+
+//Call the addIsbnClickEvents() function    
+
+                addISBNClickEvents();
+            })
+        });
+
+//create a function to load XML book data into a table
+
+        function loadBooks(xml) {
+
+//Create a variable named books and assign it the results from the 
+//xml.getElementsByTagName(“book”) function call. 
+
+            let books = xml.getElementsByTagName("book");
+
+//set-up header for the table
+
+            let tableData = `
+            <table class="table" id="bookTable">
+                <thead>
+                    <th>ISBN</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Pages</th>
+                    <th>Authors</th>
+                </thead>
+                <tbody>`;
+
+ //Use a for-of loop to fill in the xml data into the table
+ 
+            for(let book of books) {
+
+                let isbn = book.getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
+                let title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+                let description = book.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                let pages = book.getElementsByTagName("pages")[0].childNodes[0].nodeValue;
+                let authors = book.getElementsByTagName("authors")[0].childNodes[0].nodeValue;
+
+                tableData += `
+                <tr>
+                    <td data-value="ISBN">
+                        <a href="#" class="isbn-link">${isbn}</a>
+                    </td>
+
+                    <td data-value="Title">${title}</td>
+                    <td data-value="Description">${description}</td>
+                    <td data-value="Pages">${pages}</td>
+                    <td data-value="Authors">${authors}></td>
+                        `
+            }
+//table closing tags
+            tableData += `</tbody></table>`;
+
+ //Bind the variable to the bookList divv's innerHTML          
+            document.getElementById('bookList').innerHTML = tableData;
+
+        }
+
+//Create a function named anchorClicked() with a single parameter of the value e. (Exhibit F from assignment instructions)
+        function anchorClicked(e) {
+
+            e.preventDefault();
+            let self = this;
+            let cell = self.parentElement;
+            let row = cell.parentElement;
+
+            let data = row.querySelectorAll("td");
+
+// //build an HTML string for an unordered list (set an inline CSS style to list-style-type:
+// none)            
+
+            let bookData = `<ul style="list-style-type: none;">`;
+
+            for(let field of data) {
+                bookData += `<li><b>${field.dataset.value}</b>: ${field.innerHTML}</li>`;
+            }
+
+            document.getElementById('selectedBook').innerHTML = bookData;
+
+        }
+    
+ //and use a for…of loop to iterate over the data variable and append the iterated
+// object dataset fields to the unordered list.            
+
+        function addISBNClickEvents () {
+            
+            for (let index = 0; index < viewButtons.length; index++) {
+                viewButtons[index].addEventListener("click", anchorClicked);
+            }
+        }
+
+
+    </script>
+
+
+
+  </body>
+</html>

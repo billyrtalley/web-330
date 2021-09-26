@@ -1,6 +1,11 @@
 .landing {
     background-image: url('../images/landing.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
+
 
 #logo {
     color: #A63740;
@@ -15,6 +20,56 @@
     margin-left: 10px;
 }
 
+.navbar-customclass {
+    background-color: #A63740;
+}
+.navbar-customclass .navbar-brand,
+.navbar-customclass .navbar-text {
+    color: #7D9E99;
+    background-color: #A63740;
+}
+.navbar-customclass .navbar-nav .nav-link {
+    color: rgba(255,255,255,.6);
+    background-color: #A63740;
+}
+.navbar-customclass .nav-item.active .nav-link,
+.navbar-customclass .nav-item:hover .nav-link {
+    color: #7D9E99;
+    background-color: #A63740;
+}
+
+.navbar-brand {
+    color: #7D9E99;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 30px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.logo {
+    color: #7D9E99;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 30px;
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+.title {
+    color: #A63740;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 125px;
+    left: 35px;
+
+}
+
+/* 
 .header-nav {
     background-color: #262626;
     opacity: 90%;
@@ -40,7 +95,7 @@
 
 .text-white {
     color:#F2F2F2;
-}
+} */
 
 .title {
     color: #A63740;
@@ -120,25 +175,47 @@ h5 {
 }
 
 .bucket-list {
-    background-color: #C0C0C1;
+  
     background-image: url("../images/bucket_list.png");
-    object-fit: contain;
-    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
 
 
 
 .api {
     background-image: url("../images/API.png");
-    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
 
 .databases {
     background-image: url("../images/database.png");
-    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
 
 .work {
     background-image: url("../images/work.png");
-    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
+
+.navbar bg-light, .navbar-nav, .nav-link, nav-item {
+    background-color: #262626;
+    opacity: 90%;
+    font-family: 'Raleway', sans-serif; 
+    color: #F2F2F2;
+    background: #262626;
+    
+}
+
+

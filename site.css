@@ -18,7 +18,8 @@ h1, h2, h3, h4 {
 a {
     text-decoration: none;
     color: #453674;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
+    margin-top: 25px;
 }
 
 a:hover {
@@ -28,6 +29,13 @@ a:hover {
 
 a:visited {
     color: #3C275A;
+}
+
+.app-header {
+    font-size: 28px;
+    text-align: center;
+    color: #3C275A;
+    margin-bottom: 25px;
 }
 
 
