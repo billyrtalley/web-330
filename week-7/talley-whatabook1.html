@@ -155,6 +155,10 @@
 // object dataset fields to the unordered list.            
 
         function addISBNClickEvents () {
+
+//    
+
+            let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
             
             for (let index = 0; index < viewButtons.length; index++) {
                 viewButtons[index].addEventListener("click", anchorClicked);
