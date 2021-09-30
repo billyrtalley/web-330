@@ -31,6 +31,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+    background-color: #C0C0C1;
 }
 
 .navbar-brand {
@@ -72,6 +73,7 @@ body {
     font-size: 56px;
     margin-top: 0px;
     padding-top: 0px;
+    
 }
 
 .landing-main {
@@ -105,8 +107,8 @@ h5 {
 
 .navbar-custom {
     background-color: #A63740;
-    position: absolute;
-    bottom: 0px;
+    /* position: absolute;
+    bottom: 0px; */
     color:#F2F2F2;
     width: 100%;
 }
@@ -157,10 +159,10 @@ h5 {
    background-color: #C0C0C1;
 }
 
-.footer {
+/* footer {
     position: fixed;
     bottom: 0px;
-}
+} */
 
 .shadow {
     width: 70%;
@@ -177,7 +179,11 @@ h5 {
     color: #0D0D0D;
     font-size: 20px;
     font-weight: 500;
+    
 }
+
+
+
 
 
 
