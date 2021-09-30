@@ -87,60 +87,21 @@ h5 {
     color:#F2F2F2;
 }
 
-/* .footer-nav {
-    background-color: #262626;
-    height: 100px;
-    
-}
-
-.footer-navbar {
-    display: inline;
-    list-style-type: none;
-    background-color: #262626;
-    opacity: 90%;
-    display: inline;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-} */
 
 .copyright {
     background-color: #A63740;
+    opacity: 90%;
     color: #F2F2F2;
     font-family: 'Roboto', sans-serif;
-/* }
+ }
 
-.footer-link {
-    font-family: 'Raleway', sans-serif;
-    color: #F2F2F2;
-    display: inline;
-    list-style-type: none;
-    margin-top: 40px;
+.navbar-custom {
+    background-color: #A63740;
+    position: absolute;
+    bottom: 0;
+    color:#F2F2F2;
+    width: 100%;
 }
-
-.footer-link:hover {
-    color: #7D9E99;
-}
-
-.footer-li {
-    color: #F2F2F2;
-    display: inline;
-    list-style-type: none;
-    margin-top: 40px;
-    font-size: 24px;
-    font-family: 'Raleway', sans-serif;
-    background-color: #262626;
-    opacity: 90%; 
-}
-
-.footer-li:hover {
-    color: #7D9E99;
-} */
-
-/* .about {
-    background-color: #C0C0C1;
-} */
 
 .bucket-list {
   
@@ -177,13 +138,6 @@ h5 {
     background-position: center; 
 }
 
-.navbar bg-light, .navbar-nav, .nav-link, nav-item {
-    background-color: #262626;
-    opacity: 90%;
-    font-family: 'Raleway', sans-serif; 
-    color: #F2F2F2;
-    background: #262626;
-    
-}
+
 
 
