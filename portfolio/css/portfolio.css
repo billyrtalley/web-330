@@ -87,6 +87,13 @@ h5 {
     color:#F2F2F2;
 }
 
+.custom-header {
+    color: #A63740;
+    font-family: 'Raleway', sans-serif; 
+    font-weight: bold;
+    font-size: 56px;
+}
+
 
 .copyright {
     background-color: #A63740;
@@ -98,9 +105,15 @@ h5 {
 .navbar-custom {
     background-color: #A63740;
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     color:#F2F2F2;
     width: 100%;
+}
+
+.write-up {
+    font-family: 'Roboto', sans-serif;
+    color: #0D0D0D;
+    font-size: 20px;
 }
 
 .bucket-list {
@@ -136,6 +149,20 @@ h5 {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; 
+}
+
+.about {
+   background-color: #C0C0C1;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+}
+
+.shadow {
+    width: 70%;
+    height: auto;
 }
 
 
