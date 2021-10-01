@@ -199,6 +199,14 @@ h4 {
     font-family: 'Roboto', sans-serif;
 }
 
+<style>       
+    hr{
+        height: 3px;
+        background-color: #A63740;
+        border: none;
+    }
+</style>
+
 
 
 
