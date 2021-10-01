@@ -65,14 +65,14 @@ body {
 
 }
 
+card-text {
+    font-family: 'Roboto', sans-serif;
+    color: #262626;
+}
 
-.title {
-    color: #A63740;
-    font-family: 'Raleway', sans-serif; 
-    font-weight: bold;
-    font-size: 56px;
-    margin-top: 0px;
-    padding-top: 0px;
+
+.title-container {
+    height: 90vh;
     
 }
 
@@ -87,6 +87,11 @@ body {
 
 h5 {
     color:#F2F2F2;
+}
+
+h4 {
+    color: #A63740;
+    font-family: 'Roboto', sans-serif;
 }
 
 .custom-header {
@@ -122,6 +127,15 @@ h5 {
 .bucket-list {
     background-color: #C0C0C1;
     
+}
+
+.bucket-pics {
+    width: 350px;
+    height: auto;
+}
+
+.bucket-container {
+    height: 90vh;
 }
 
 .resume {
@@ -169,10 +183,7 @@ h5 {
     height: auto;
 }
 
-.bucket-pics {
-    width: 350px;
-    height: auto;
-}
+
 
 .list-unstyled {
     font-family: 'Roboto', sans-serif;
