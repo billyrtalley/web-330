@@ -1,0 +1,171 @@
+<!--
+  Title: WEB330 Exercise 7.2 WhatABook Part 1
+  Author: William Talley
+  Date: 25 September 2021
+  Description: 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB330- Enterprise JavaScript II</title>
+    <meta name="description" content="Assignment 7.2 WhatABook Part 1"/>
+    <meta name="keywords"content="WEB330, Web Development, XML, Assignment 7.2, week 7"/>
+    <meta name="robots" content="nofollow" />
+    <meta name="author" content="William Talley" />
+    <link rel="stylesheet" type="text/css" href="../theme.css"> 
+    <link rel="stylesheet" type="text/css" href="../global.css">
+    <link rel="stylesheet" type="text/css" href= "../site.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+    
+    <div id="container">
+
+<!-- Whatabook2 App title. -->
+        <div class="app-header">Welcome to the WhatABook, Part 1 App!</div>
+        <div class="assign-content">
+
+<!-- Whatabook2 book listing -->
+            <div class="card">
+                <div class="card-title">Book Listing</div>
+                <div class="card-content" id="bookList"></div>  
+            </div>
+
+           
+            <a class="return-home" href="../index.html">Return</a>
+
+<!--div for the results  -->
+
+            <div class="card">
+                <div class="card-title">Selected Book</div>
+                <div class="card-content" id="selectedBook"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+
+//Import the HTTP-client class from .js file
+
+        import { HttpClinet } from "./http-client.js";
+
+//Instantiate a new HttpClient object and assign it to a new variable named http.
+
+        const http = new HttpClient();
+        let book = {};
+
+//Create a variable named isbns and assign it an array of ISBN numbers (ISBNs from assignment 8 instructions)
+
+        const isbns = [
+                '0345339681',
+                '0261103571',
+                '9780593099322',
+                '9780261102361',
+                '9780261102378',
+                '9780590302715',
+                '9780316769532',
+                '9780743273565',
+                '9780590405959'
+            ]
+//Create an object literal named params
+
+        const params = {
+                "bibkeys": `ISBN: ${isbns.join(",")}`,
+                "format": "json",
+                "jscmd": "details"
+            };
+//Call the http.get function nd supply it with the open library URL and the params objects.  
+//Add a then clause using arrow functions with a res object 
+// In the body of the call, call the buildHtmlString() function supplying it with the res object 
+//and the string value “table” and bind the results to the bookListing div. 
+// Call the addIsbnClickEvents() function 
+// Add a catch() statement with an arrow function for error and write the error to the console 
+// using the console.log() API. 
+
+        http.get("https://openlibrary.org/api/books", params).then(res => {
+            console.log(res);
+
+            document.getElementById("bookList").innerHTML = buildHtmlString(res, "table");
+            book = res;
+            addISBNClickEvents();
+        })
+// Add a catch() statement with an arrow function for error and write the error to the console 
+// using the console.log() API.  
+        .catch(e => {
+            console.log(e);
+        })   
+// Create a function named getBook() that accepts an event object 
+        function getBook(e)
+            {
+                e.preventDefault();
+
+                let self = this;
+
+                let isbn = self.innerText;
+
+                let obj = {};
+                obj [isbn] = book[isbn];
+
+                document.getElementById("selectedBook").innerHTML = buildHtmlString(obj);
+            }
+
+
+            function buildHtmlString(res, format)
+            {
+
+                let tableString = `<table><tr><th>ISBN</th><th>Title</th><th>Description</th><th>Pages</th><th>Authors</th></tr>`;
+
+                let ulString = '';
+
+                for (const key in res)
+                {
+
+                    if (res.hasOwnProperty(key)) {
+                        let authors = [];
+                        if (res[key].details.authors) {
+                            authors = res[key].details.authors.map(function(author) {
+                                return author.name;
+                            })
+                        }
+                        let bookDetails = res[key].details;
+                        let book = {
+                        isbn: bookDetails.isbn_13 ? bookDetails.isbn_13 : bookDetails.isbn_10,
+                        title: bookDetails.title, 
+                        description: bookDetails.subtitle ? bookDetails.subtitle : "N/A",
+                        pages: bookDetails.number_of_pages ? bookDetails.number_of_pages : "N/A",
+                        authors : authors.join(", ")
+                    } 
+
+                    ulString += `<li><b>ISBN:</b> ${book.isbn}</li><li><b>Title:</b> ${book.title}</li><li><b>Description:</b> ${book.description}</li>
+                    <li><b>Pages:</b> ${book.pages}</li><li><b>Authors:</b> ${book.authors}</li>`;
+
+                    tableString += `<tr><td><a href="#" class="isbn-link">${book.isbn}</a></td><td>${book.title}</td><td>${book.description}</td>
+                        <td>${book.pages}</td><td>${book.authors}</td></tr>`;
+                    }
+
+                
+                }
+                ulString += "</ul>";
+                tableString += "</table>";
+
+                return (format === "table") ? tableString : ulString;
+            }
+
+// Call the addIsbnClickEvents() function 
+
+            function addISBNClickEvents() {
+                let links = document.getElementsByClassName("isbn-link");
+                Array.from(links).forEach(element => {
+                    element.addEventListener("click", getBook);
+                });
+            }
+
+
+</script>
+
+
+</body>
