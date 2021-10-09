@@ -25,6 +25,10 @@ accessed on: 6/4/2021
     margin-bottom: 25px;
 }
 
+h1 {
+    color: #fff
+}
+
 .card-title {
     text-align: center;
     font-size: 2em;
