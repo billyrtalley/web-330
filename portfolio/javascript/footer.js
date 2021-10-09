@@ -16,16 +16,16 @@ class Footer extends HTMLElement {
             <h5 class="text-uppercase">Links</h5>
             <ul class="list-unstyled">
               <li>
-              <a href="#!">My Github</a>
+              <a href="https://github.com/billyrtalley">My Github</a>
               </li>
               <li>
-              <a href="#!">Bellevue University Web Development Program</a>
+              <a href="https://www.bellevue.edu/degrees/bachelor/web-development-bs/">Bellevue University Web Development Program</a>
               </li>
               <li>
-              <a href="#!">Bellevue University Youtube</a>
+              <a href="https://www.youtube.com/user/bellevueuniversity/">Bellevue University Youtube</a>
               </li>
               <li>
-              <a href="#!">Bellevue University Github</a>
+              <a href="https://github.com/buwebdev">Bellevue University Github</a>
               </li>
             </ul>
           </div>
