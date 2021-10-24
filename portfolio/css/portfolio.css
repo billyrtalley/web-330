@@ -65,7 +65,7 @@ body {
 
 }
 
-card-text {
+.card-text {
     font-family: 'Roboto', sans-serif;
     color: #262626;
 }
