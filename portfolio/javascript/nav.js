@@ -32,6 +32,9 @@ class Nav extends HTMLElement {
         <li class="nav-item">
             <a class="nav-link" href="bucket-list.html">Bucket List</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="devops-presentations.html">DevOps Presentations</a>
+        </li>
         </ul>
       
           </div>
